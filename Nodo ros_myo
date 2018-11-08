@@ -1,0 +1,5 @@
+Para inicializar el nodo de la myo se abre el terminal, se ejectuta roscore y en una nueva ventana se corren las siguientes lineas
+
+cd ~/catkin_ws
+source ./devel/setup.bash
+rosrun ros_myo myo-rawNode.py
