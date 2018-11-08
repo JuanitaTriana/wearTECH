@@ -1,0 +1,19 @@
+Guardar datos MYO (guardados en wearTECH/data) por año,mes,dia,horaa,minuto
+~cd wearTECH
+~python myo_con.py
+(orientation(x,y,z); linear_acceleration(x,y,z); angular_velocity(x,y,z))
+
+
+
+Guardar datos del celular y de la myo al tiempo 
+~cd wearTECH
+~nano my_script.sh(revisar la direccion IP en sensor log)
+~bash my_script.sh
+queda guardado en mylog_test.csv
+
+
+
+
+
+
+
