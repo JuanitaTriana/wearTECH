@@ -1,0 +1,19 @@
+El nodo ros_myo es de https://github.com/roboTJ101/ros_myo
+
+Para inicializar el nodo de la myo se abre el terminal, se ejectuta roscore y en una nueva ventana se corren las siguientes lineas
+
+cd ~/catkin_ws
+source ./devel/setup.bash
+rosrun ros_myo myo-rawNode.py
+
+si el nodo no se ejecuta o se desconecta la myo se busca en la carpeta del nodo el script myo-rawNode.py y la linea 301
+
+elif attr == 0x23:
+  typ, val, xdir = unpack('3B', pay)
+  
+se reemplaza por 
+
+elif attr == 0x23:
+  typ, val, xdir, unknown1, unknown2, unknown3 = unpack('6B', pay)
+
+Este error ocurre porque el nodo trabaja con el firmware antiguo de la myo.
